@@ -24,6 +24,12 @@ class iosrtcPlugin : CDVPlugin {
 	override func pluginInitialize() {
 		NSLog("iosrtcPlugin#pluginInitialize()")
 
+		pluginMediaStreams = [:]
+		pluginMediaStreamTracks = [:]
+		pluginMediaStreamRenderers = [:]
+		queue = dispatch_queue_create("cordova-plugin-iosrtc", DISPATCH_QUEUE_SERIAL)
+		pluginRTCPeerConnections = [:]
+
 		// Initialize DTLS stuff.
 		RTCPeerConnectionFactory.initializeSSL()
 
