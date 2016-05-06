@@ -21,18 +21,19 @@ class PluginMediaStreamRenderer : NSObject, RTCEAGLVideoViewDelegate {
 		// The browser HTML view.
 		self.webView = webView
 		self.eventListener = eventListener
+		self.webView.opaque = false
+    self.webView.backgroundColor = UIColor.clearColor()
 		// The video element view.
 		self.elementView = UIView()
 		// The effective video view in which the the video stream is shown.
 		// It's placed over the elementView.
 		self.videoView = RTCEAGLVideoView()
 
-		self.webView.addSubview(self.elementView)
-		self.webView.bringSubviewToFront(self.elementView)
+		self.webView.superview?.addSubview(self.elementView)
 
 		self.elementView.userInteractionEnabled = false
 		self.elementView.hidden = true
-		self.elementView.backgroundColor = UIColor.blackColor()
+		self.elementView.backgroundColor = UIColor.clearColor()
 		self.elementView.addSubview(self.videoView)
 		self.elementView.layer.masksToBounds = true
 
@@ -183,7 +184,28 @@ class PluginMediaStreamRenderer : NSObject, RTCEAGLVideoViewDelegate {
 		}
 
 		self.elementView.alpha = CGFloat(opacity)
-		self.elementView.layer.zPosition = CGFloat(zIndex)
+
+
+		//self.elementView.layer.zPosition = CGFloat(zIndex)
+
+
+ 		// Storing the zIndex as Tag of view for sorting the view herarchy according to zIndex later
+     self.elementView.tag = Int(zIndex)
+
+     //Sorting the views according to their zIndex
+     var prevSiblingView: UIView?
+     for childView in (self.webView.superview?.subviews)!{
+       if(childView.tag > Int(zIndex)){
+         prevSiblingView = childView;
+         break;
+       }
+   	}
+
+     if let view = prevSiblingView {
+       self.webView.superview?.insertSubview(self.elementView, belowSubview: view)
+     }
+
+
 
 		if !mirrored {
 			self.elementView.transform = CGAffineTransformIdentity

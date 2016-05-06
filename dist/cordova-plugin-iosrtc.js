@@ -2449,6 +2449,20 @@ var debug = require('debug')('iosrtc:videoElementsHandler'),
 
 
 function videoElementsHandler(_mediaStreams, _mediaStreamRenderers) {
+		//Creating CSS for hiding the HTML5 Video button in IOS safari
+			var cssToHideControls = 'video::-webkit-media-controls { display:none !important; }';
+		var styleElement = document.createElement('style');
+
+			if (styleElement.styleSheet) {
+			  styleElement.styleSheet.cssText = cssToHideControls;
+			} else {
+			  styleElement.appendChild(document.createTextNode(cssToHideControls));
+			}
+
+			//Adding the created style tag to document object
+				document.getElementsByTagName('head')[0].appendChild(styleElement);
+
+
 	var existingVideos = document.querySelectorAll('video'),
 		i, len,
 		video;
