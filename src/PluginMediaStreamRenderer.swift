@@ -1,6 +1,9 @@
 import Foundation
 import AVFoundation
 
+	/**
+	 * CdC changes for rear video 2016 05 06
+	 */
 
 class PluginMediaStreamRenderer : NSObject, RTCEAGLVideoViewDelegate {
 	var webView: UIView
