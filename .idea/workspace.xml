@@ -1,59 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4e2dd63-9510-44fb-972b-be2cb0c74e63" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FAQ.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ISSUE_TEMPLATE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PluginRTCDTMFSender.swift" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCDTMFSender.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/RTCDTMFSender.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/RTCStatsReport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/RTCStatsResponse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra/libwebrtc-objc-iosrtc-dtmf.patch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/extra/libwebrtc-objc-iosrtc-misc.patch" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/rtcninjaPlugin.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/libWebRTC-LATEST-Universal-Release.a" afterPath="$PROJECT_DIR$/lib/libWebRTC-LATEST-Universal-Release.a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Building.md" afterPath="$PROJECT_DIR$/docs/Building.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/BuildingLibWebRTC.md" afterPath="$PROJECT_DIR$/docs/BuildingLibWebRTC.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/MediaDeviceInfo.js" afterPath="$PROJECT_DIR$/js/MediaDeviceInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginEnumerateDevices.swift" afterPath="$PROJECT_DIR$/src/PluginEnumerateDevices.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginGetUserMedia.swift" afterPath="$PROJECT_DIR$/src/PluginGetUserMedia.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginMediaStream.swift" afterPath="$PROJECT_DIR$/src/PluginMediaStream.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginMediaStreamRenderer.swift" afterPath="$PROJECT_DIR$/src/PluginMediaStreamRenderer.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginMediaStreamTrack.swift" afterPath="$PROJECT_DIR$/src/PluginMediaStreamTrack.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginRTCDataChannel.swift" afterPath="$PROJECT_DIR$/src/PluginRTCDataChannel.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginRTCPeerConnection.swift" afterPath="$PROJECT_DIR$/src/PluginRTCPeerConnection.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginRTCPeerConnectionConfig.swift" afterPath="$PROJECT_DIR$/src/PluginRTCPeerConnectionConfig.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginRTCPeerConnectionConstraints.swift" afterPath="$PROJECT_DIR$/src/PluginRTCPeerConnectionConstraints.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginRTCTypes.swift" afterPath="$PROJECT_DIR$/src/PluginRTCTypes.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PluginUtils.swift" afterPath="$PROJECT_DIR$/src/PluginUtils.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webrtc-headers/RTCAVFoundationVideoSource.h" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCAVFoundationVideoSource.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RTCDataChannel.js" afterPath="$PROJECT_DIR$/js/RTCDataChannel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webrtc-headers/RTCI420Frame.h" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCI420Frame.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webrtc-headers/RTCMediaStreamTrack.h" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCMediaStreamTrack.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webrtc-headers/RTCPeerConnection.h" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCPeerConnection.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/RTCPeerConnection.js" afterPath="$PROJECT_DIR$/js/RTCPeerConnection.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/webrtc-headers/RTCTypes.h" afterPath="$PROJECT_DIR$/src/webrtc-headers/RTCTypes.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WHO_USES_IT.md" afterPath="$PROJECT_DIR$/WHO_USES_IT.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/banner.txt" afterPath="$PROJECT_DIR$/banner.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/cordova-plugin-iosrtc-Bridging-Header.h" afterPath="$PROJECT_DIR$/src/cordova-plugin-iosrtc-Bridging-Header.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/cordova-plugin-iosrtc.js" afterPath="$PROJECT_DIR$/dist/cordova-plugin-iosrtc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/getUserMedia.js" afterPath="$PROJECT_DIR$/js/getUserMedia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra/ios-websocket-hack.js" afterPath="$PROJECT_DIR$/extra/ios-websocket-hack.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra/hooks/iosrtc-swift-support.js" afterPath="$PROJECT_DIR$/extra/hooks/iosrtc-swift-support.js" />
+    <list default="true" id="b4e2dd63-9510-44fb-972b-be2cb0c74e63" name="Default" comment="Working version.&#10;Able to successfully make calls.&#10;Selecting audio source (eg speaker) has been removed.  Tried to add it back, but this didn't work.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/iosrtc.js" afterPath="$PROJECT_DIR$/js/iosrtc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/iosrtc.md" afterPath="$PROJECT_DIR$/docs/iosrtc.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iosrtcPlugin.swift" afterPath="$PROJECT_DIR$/src/iosrtcPlugin.swift" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extra/libwebrtc-objc-iosrtc.patch" afterPath="$PROJECT_DIR$/extra/libwebrtc-objc-iosrtc.patch" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/videoCSS.md" afterPath="$PROJECT_DIR$/docs/videoCSS.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="cordova-plugin-iosrtc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -120,18 +71,28 @@
       <file leaf-file-name="PluginMediaStreamRenderer.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PluginMediaStreamRenderer.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="20.037037">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="58" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="iosrtcPlugin.swift" pinned="false" current-in-tab="true">
+      <file leaf-file-name="iosrtcPlugin.swift" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iosrtcPlugin.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6687898">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="-17.666666">
+              <caret line="876" column="0" selection-start-line="876" selection-start-column="0" selection-end-line="876" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="iosrtc.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/iosrtc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.94455445">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,7 +124,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="CDC-252-HTML-over-iOSRTC-video" />
+        <entry key="$PROJECT_DIR$" value="v4-merge" />
       </map>
     </option>
     <option name="RESET_MODE" value="HARD" />
@@ -176,6 +137,7 @@
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/PluginMediaStreamRenderer.swift" />
         <option value="$PROJECT_DIR$/src/iosrtcPlugin.swift" />
+        <option value="$PROJECT_DIR$/js/iosrtc.js" />
       </list>
     </option>
   </component>
@@ -192,10 +154,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-109" />
-    <option name="y" value="-1050" />
+    <option name="x" value="-169" />
+    <option name="y" value="-1042" />
     <option name="width" value="1654" />
-    <option name="height" value="964" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -220,6 +182,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,10 +215,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-iosrtc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-iosrtc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,19 +273,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-109" y="-1050" width="1654" height="964" extended-state="0" />
-    <editor active="true" />
+    <frame x="-169" y="-1042" width="1654" height="1042" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="GfmBrowser" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34863523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35297766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41273585" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42424244" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3356974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33490565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -366,14 +342,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dist/cordova-plugin-iosrtc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3351" column="0" selection-start-line="3351" selection-start-column="0" selection-end-line="3351" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/videoElementsHandler.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -772,7 +740,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PluginMediaStreamRenderer.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="20.037037">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="58" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="58" />
           <folding />
         </state>
@@ -780,8 +748,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/iosrtcPlugin.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6687898">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.666666">
+          <caret line="876" column="0" selection-start-line="876" selection-start-column="0" selection-end-line="876" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/iosrtc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94455445">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding />
         </state>
       </provider>
