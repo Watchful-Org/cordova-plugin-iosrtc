@@ -6,9 +6,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	var id: String
 	var audioTracks: [String : PluginMediaStreamTrack] = [:]
 	var videoTracks: [String : PluginMediaStreamTrack] = [:]
-	var eventListener: ((data: NSDictionary) -> Void)?
-	var eventListenerForAddTrack: ((pluginMediaStreamTrack: PluginMediaStreamTrack) -> Void)?
-	var eventListenerForRemoveTrack: ((id: String) -> Void)?
+	var eventListener: ((_ data: NSDictionary) -> Void)?
+	var eventListenerForAddTrack: ((_ pluginMediaStreamTrack: PluginMediaStreamTrack) -> Void)?
+	var eventListenerForRemoveTrack: ((_ id: String) -> Void)?
 
 
 	/**
@@ -18,7 +18,8 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 		NSLog("PluginMediaStream#init()")
 
 		self.rtcMediaStream = rtcMediaStream
-		self.id = rtcMediaStream.label  // Old API uses "label" instead of "id".
+		// ObjC API does not provide id property, so let's set a random one.
+		self.id = rtcMediaStream.label + "-" + UUID().uuidString
 
 		for track: RTCMediaStreamTrack in (self.rtcMediaStream.audioTracks as! Array<RTCMediaStreamTrack>) {
 			let pluginMediaStreamTrack = PluginMediaStreamTrack(rtcMediaStreamTrack: track)
@@ -68,9 +69,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 
 
 	func setListener(
-		eventListener: (data: NSDictionary) -> Void,
-		eventListenerForAddTrack: ((pluginMediaStreamTrack: PluginMediaStreamTrack) -> Void)?,
-		eventListenerForRemoveTrack: ((id: String) -> Void)?
+		_ eventListener: @escaping (_ data: NSDictionary) -> Void,
+		eventListenerForAddTrack: ((_ pluginMediaStreamTrack: PluginMediaStreamTrack) -> Void)?,
+		eventListenerForRemoveTrack: ((_ id: String) -> Void)?
 	) {
 		NSLog("PluginMediaStream#setListener()")
 
@@ -80,7 +81,7 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	}
 
 
-	func addTrack(pluginMediaStreamTrack: PluginMediaStreamTrack) -> Bool {
+	func addTrack(_ pluginMediaStreamTrack: PluginMediaStreamTrack) -> Bool {
 		NSLog("PluginMediaStream#addTrack()")
 
 		if pluginMediaStreamTrack.kind == "audio" {
@@ -107,7 +108,7 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	}
 
 
-	func removeTrack(pluginMediaStreamTrack: PluginMediaStreamTrack) -> Bool {
+	func removeTrack(_ pluginMediaStreamTrack: PluginMediaStreamTrack) -> Bool {
 		NSLog("PluginMediaStream#removeTrack()")
 
 		if pluginMediaStreamTrack.kind == "audio" {
@@ -139,8 +140,8 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	 */
 
 
-	func OnAddAudioTrack(rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
-		NSLog("PluginMediaStream | OnAddAudioTrack [label:\(track.label)]")
+	func onAddAudioTrack(_ rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
+		NSLog("PluginMediaStream | OnAddAudioTrack [label:%@]", String(track.label))
 
 		let pluginMediaStreamTrack = PluginMediaStreamTrack(rtcMediaStreamTrack: track)
 
@@ -148,9 +149,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 		self.audioTracks[pluginMediaStreamTrack.id] = pluginMediaStreamTrack
 
 		if self.eventListener != nil {
-			self.eventListenerForAddTrack!(pluginMediaStreamTrack: pluginMediaStreamTrack)
+			self.eventListenerForAddTrack!(pluginMediaStreamTrack)
 
-			self.eventListener!(data: [
+			self.eventListener!([
 				"type": "addtrack",
 				"track": pluginMediaStreamTrack.getJSON()
 			])
@@ -158,8 +159,8 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	}
 
 
-	func OnAddVideoTrack(rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
-		NSLog("PluginMediaStream | OnAddVideoTrack [label:\(track.label)]")
+	func onAddVideoTrack(_ rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
+		NSLog("PluginMediaStream | OnAddVideoTrack [label:%@]", String(track.label))
 
 		let pluginMediaStreamTrack = PluginMediaStreamTrack(rtcMediaStreamTrack: track)
 
@@ -167,9 +168,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 		self.videoTracks[pluginMediaStreamTrack.id] = pluginMediaStreamTrack
 
 		if self.eventListener != nil {
-			self.eventListenerForAddTrack!(pluginMediaStreamTrack: pluginMediaStreamTrack)
+			self.eventListenerForAddTrack!(pluginMediaStreamTrack)
 
-			self.eventListener!(data: [
+			self.eventListener!([
 				"type": "addtrack",
 				"track": pluginMediaStreamTrack.getJSON()
 			])
@@ -177,8 +178,8 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	}
 
 
-	func OnRemoveAudioTrack(rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
-		NSLog("PluginMediaStream | OnRemoveAudioTrack [label:\(track.label)]")
+	func onRemoveAudioTrack(_ rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
+		NSLog("PluginMediaStream | OnRemoveAudioTrack [label:%@]", String(track.label))
 
 		// It may happen that track was removed due to user action (removeTrack()).
 		if self.audioTracks[track.label] == nil {
@@ -188,9 +189,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 		self.audioTracks[track.label] = nil
 
 		if self.eventListener != nil {
-			self.eventListenerForRemoveTrack!(id: track.label)
+			self.eventListenerForRemoveTrack!(track.label)
 
-			self.eventListener!(data: [
+			self.eventListener!([
 				"type": "removetrack",
 				"track": [
 					"id": track.label,
@@ -201,8 +202,8 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 	}
 
 
-	func OnRemoveVideoTrack(rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
-		NSLog("PluginMediaStream | OnRemoveVideoTrack [label:\(track.label)]")
+	func onRemoveVideoTrack(_ rtcMediaStream: RTCMediaStream!, track: RTCMediaStreamTrack!) {
+		NSLog("PluginMediaStream | OnRemoveVideoTrack [label:%@]", String(track.label))
 
 		// It may happen that track was removed due to user action (removeTrack()).
 		if self.videoTracks[track.label] == nil {
@@ -212,9 +213,9 @@ class PluginMediaStream : NSObject, RTCMediaStreamDelegate {
 		self.videoTracks[track.label] = nil
 
 		if self.eventListener != nil {
-			self.eventListenerForRemoveTrack!(id: track.label)
+			self.eventListenerForRemoveTrack!(track.label)
 
-			self.eventListener!(data: [
+			self.eventListener!([
 				"type": "removetrack",
 				"track": [
 					"id": track.label,

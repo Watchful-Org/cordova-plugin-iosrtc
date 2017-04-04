@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 		id="cordova-plugin-iosrtc"
-		version="2.2.4-pre">
+		version="4.0.0">
 
 	<name>iosrtc</name>
 	<description>Cordova iOS plugin exposing the full WebRTC W3C JavaScript APIs</description>
-	<author>Iñaki Baz Castillo at eFace2Face, inc.</author>
+	<author>eFace2Face, Inc. and BasqueVoIPMafia</author>
 	<license>MIT</license>
 	<keywords>webrtc, ios</keywords>
 
 	<info>
 		cordova-plugin-iosrtc enables use of the JavaScript WebRTC APIs (as defined by the W3C) in iOS devices.
-		Learn more at https://github.com/eface2face/cordova-plugin-iosrtc
+		Learn more at https://github.com/BasqueVoIPMafia/cordova-plugin-iosrtc
 	</info>
 
 	<engines>
@@ -35,6 +35,7 @@
 		<header-file src="src/webrtc-headers/RTCAudioSource.h" />
 		<header-file src="src/webrtc-headers/RTCAudioTrack.h" />
 		<header-file src="src/webrtc-headers/RTCDataChannel.h" />
+		<header-file src="src/webrtc-headers/RTCDTMFSender.h" />
 		<header-file src="src/webrtc-headers/RTCEAGLVideoView.h" />
 		<header-file src="src/webrtc-headers/RTCFileLogger.h" />
 		<header-file src="src/webrtc-headers/RTCI420Frame.h" />
@@ -72,6 +73,7 @@
 		<source-file src="src/PluginRTCPeerConnectionConfig.swift" />
 		<source-file src="src/PluginRTCPeerConnectionConstraints.swift" />
 		<source-file src="src/PluginRTCDataChannel.swift" />
+		<source-file src="src/PluginRTCDTMFSender.swift" />
 		<source-file src="src/PluginMediaStream.swift" />
 		<source-file src="src/PluginMediaStreamTrack.swift" />
 		<source-file src="src/PluginGetUserMedia.swift" />
