@@ -214,8 +214,7 @@ class PluginRTCDataChannel : NSObject, RTCDataChannelDelegate {
 		if self.eventListener != nil {
 			self.eventListener!([
 				"type": "statechange",
-				"readyState": state_str
-			])
+				"readyState": state_str ?? <#default value#>s			])
 		} else {
 			// It may happen that the eventListener is not yet set, so store the lost states.
 			self.lostStates.append(state_str!)
@@ -264,7 +263,7 @@ class PluginRTCDataChannel : NSObject, RTCDataChannelDelegate {
 
 			self.eventListener!([
 				"type": "message",
-				"message": string as! String
+				"message": string! as String
 			])
 		} else {
 			self.eventListenerForBinaryMessage!(buffer.data)
